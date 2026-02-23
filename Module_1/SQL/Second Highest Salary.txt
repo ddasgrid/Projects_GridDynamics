@@ -1,0 +1,5 @@
+select (with cte1 as
+(select distinct(salary) from employee),
+cte2 as
+(select salary,dense_rank() over(order by salary desc) as r from cte1)
+select salary from cte2 where r=2) as SecondHighestSalary;
