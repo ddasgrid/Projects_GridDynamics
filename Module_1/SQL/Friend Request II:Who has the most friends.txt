@@ -1,0 +1,5 @@
+with cte1 as
+(select requester_id as id from requestaccepted union all select accepter_id as id from requestaccepted),
+cte2 as
+(select id,count(id) as num from cte1 group by id order by num desc)
+select id,num from cte2 limit 1;
