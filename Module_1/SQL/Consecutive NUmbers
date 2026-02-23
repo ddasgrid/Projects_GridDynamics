@@ -1,5 +1,0 @@
-with cte1 as
-(select id,num,lead(num) over() as next,lead(num,2) over() as next1 from logs),
-cte2 as
-(select id,num,next from cte1 where num=next and num=next1)
-select distinct(num) as ConsecutiveNums from cte2;
