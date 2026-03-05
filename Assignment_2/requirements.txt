@@ -1,7 +1,3 @@
-
-https://drive.google.com/drive/folders/1G8HXVayxYRuoW8L-69jry8BzTed1pGZP?usp=sharing
-
-
 torch>=2.0.0
 transformers>=4.30.0
 nltk>=3.8.1
