@@ -1,4 +1,4 @@
-# base_model.ipynb
+## base_model.ipynb
 
 **Objective:** Establish a strong performance baseline using 100% of the dataset by testing a simple fusion mechanism and progressively unfreezing the transformer layers.
 
@@ -28,7 +28,7 @@ This identical base pipeline was used across all three training sessions in this
 * Result: Achieved a validation accuracy of 73.73%. The model was saved to best_model_acc_73.7.pth.
 * What it suggests: Unfreezing half of the network allows for deep, task-specific alignment between the visual and textual modalities. It proves that a highly simple architecture can achieve competitive scores if the powerful pre-trained encoders are permitted to do the heavy lifting.
 
-# Fusion Head Optimization (Experiment_1.ipynb to Experiment_2.ipynb)
+## Fusion Head Optimization (Experiment_1.ipynb to Experiment_4.ipynb)
 
 **Objective:** Conduct a rapid hyperparameter and architecture search to determine the optimal Fusion Mechanism. To iterate quickly and isolate the fusion head's learning capacity, a 20% subset of the data was used with all transformer layers completely frozen. 
 
@@ -63,7 +63,7 @@ The following base pipeline was used across all five experiments:
 * Result: Attention Fusion achieved the highest overall accuracy (57.74%), narrowly beating Concatenation. 
 * What it suggests: Cross-attention is the most effective and theoretically sound fusion method for this pipeline. By allowing the text to actively query the image representations, the model finds better alignments between modalities, making it the chosen fusion architecture for the final model build.
 
-# experiment_1.ipynb
+## Experiment_1.ipynb
 
 **Objective:** With Attention Fusion selected as the optimal merging strategy, this experiment focuses on fine-tuning the hyperparameters of the Fusion Head (depth, hidden dimensions, and dropout rate) to maximize validation accuracy. All base transformer layers remained frozen to isolate the fusion head's learning capacity.
 
@@ -99,7 +99,7 @@ The following base pipeline was used across all five experiments:
 ## Finalized Fusion Architecture
 Based on these runs, the optimal architecture for the Fusion Head moving forward is **Attention Fusion with Depth 1, Hidden Dimensions of 512, and a Dropout Rate of 0.3**.
 
-# Classifier Head Optimization (Experiments_5.ipynb - Experiment_7.ipynb)
+## Classifier Head Optimization (Experiments_5.ipynb - Experiment_7.ipynb)
 
 **Objective:** With the Fusion Head architecture finalized (Attention Fusion, Depth 1, Hidden Dimensions 512, Dropout 0.3), the focus shifted to finding the most effective Classifier Head to interpret the fused representations. The 20% data subset with fully frozen encoders was used to isolate the classifier's performance.
 
