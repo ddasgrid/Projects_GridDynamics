@@ -1,1 +1,15 @@
 
+https://drive.google.com/drive/folders/1G8HXVayxYRuoW8L-69jry8BzTed1pGZP?usp=sharing
+
+
+torch>=2.0.0
+transformers>=4.30.0
+nltk>=3.8.1
+nlpaug>=1.1.11
+pandas>=1.5.0
+numpy>=1.23.0
+Pillow>=9.0.0
+tqdm>=4.65.0
+streamlit>=1.25.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
