@@ -149,4 +149,4 @@ Based on these runs, the SwiGLU Classifier was selected as the final classificat
 * Setup: 100% of the dataset, infused with hard negatives. More transformer layers were unfrozen (4 layers unfrozen) to allow for maximum flexibility.
 * Result: The training became highly unstable. In early runs, accuracy plateaued and triggered early stopping around 59.64% to 66.99%. In the final run, the model completely collapsed in Epoch 2, returning a `NaN` (Not a Number) training/validation loss and dropping to a baseline 33.37% accuracy. 
 
-## Final Conclusion: Why the Simple Base Model Won
+## Final Conclusion: The Simple Base Model Won
